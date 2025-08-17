@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La Bella Cucina — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="La Bella Cucina — Fine Italian Dining" />
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- NAV -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="{{unsplash: elegant restaurant logo on wooden table}}" alt="Logo" class="w-12 h-12 rounded-full object-cover">
+        <div>
+          <h1 class="text-xl font-bold">La Bella Cucina</h1>
+          <p class="text-sm text-gray-500">Authentic Italian Dining</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="./index.html" class="text-sm font-medium text-gray-700 hover:text-amber-600">Home</a>
+        <a href="./about.html" class="text-sm font-medium text-gray-700 hover:text-amber-600">About</a>
+        <a href="./contact.html" class="text-sm font-medium text-gray-700 hover:text-amber-600">Contact</a>
+        <a href="#reservation" class="ml-4 inline-block bg-amber-600 text-white px-4 py-2 rounded shadow hover:bg-amber-700">Reserve</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="p-2 rounded-md bg-gray-100 hover:bg-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <div class="px-6 py-3 flex flex-col gap-2">
+        <a href="./index.html" class="text-gray-700">Home</a>
+        <a href="./about.html" class="text-gray-700">About</a>
+        <a href="./contact.html" class="text-gray-700">Contact</a>
+        <a href="#reservation" class="text-amber-600 font-medium">Reserve</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="bg-gradient-to-r from-amber-50 to-white">
+      <div class="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Welcome to La Bella Cucina</h2>
+          <p class="text-gray-600 mb-6">Experience the warmth and flavors of Italy. Fresh ingredients, family recipes, and a cozy atmosphere — perfect for romantic dinners, family gatherings, and special celebrations.</p>
+          <div class="flex gap-3">
+            <a href="#menu" class="inline-block bg-amber-600 text-white px-5 py-3 rounded shadow hover:bg-amber-700">Explore Menu</a>
+            <a href="#reservation" class="inline-block border border-amber-600 text-amber-600 px-5 py-3 rounded hover:bg-amber-50">Make a Reservation</a>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <img src="{{unsplash: close up of a beautifully plated Italian pasta with basil and parmesan}}" alt="Pasta dish" class="w-full h-72 object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="container mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Our Story</h3>
+          <p class="text-gray-600 mb-4">La Bella Cucina began as a small family kitchen and grew into a beloved neighborhood restaurant. We focus on seasonal produce, handmade pasta, and authentic recipes passed down through generations.</p>
+          <a href="./about.html" class="text-amber-600 font-medium">Learn more →</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <img src="{{unsplash: rustic restaurant interior with wooden tables and soft lighting}}" alt="Interior" class="w-full h-40 object-cover rounded">
+          <img src="{{unsplash: chef preparing fresh pasta in a cozy kitchen}}" alt="Chef" class="w-full h-40 object-cover rounded">
+          <img src="{{unsplash: assortment of Italian desserts on a wooden table}}" alt="Desserts" class="w-full h-40 object-cover rounded">
+          <img src="{{unsplash: wine glasses and candlelit table setting}}" alt="Wine" class="w-full h-40 object-cover rounded">
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="bg-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold">Featured Menu</h3>
+          <div class="flex gap-2">
+            <button class="px-3 py-1 text-sm bg-gray-100 rounded" data-filter="all">All</button>
+            <button class="px-3 py-1 text-sm bg-gray-100 rounded" data-filter="starters">Starters</button>
+            <button class="px-3 py-1 text-sm bg-gray-100 rounded" data-filter="mains">Mains</button>
+            <button class="px-3 py-1 text-sm bg-gray-100 rounded" data-filter="desserts">Desserts</button>
+          </div>
+        </div>
+
+        <div id="menuGrid" class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article class="border rounded-lg overflow-hidden shadow-sm menu-item" data-category="starters" data-title="Bruschetta al Pomodoro" data-price="8" data-desc="Grilled bread topped with vine-ripened tomatoes, garlic, basil, and olive oil.">
+            <img src="{{unsplash: bruschetta on rustic plate with tomatoes and basil}}" alt="Bruschetta" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h4 class="font-semibold">Bruschetta al Pomodoro</h4>
+              <p class="text-amber-600 font-bold mt-2">$8</p>
+              <div class="mt-3 flex justify-between items-center">
+                <button class="openDetails text-sm text-amber-600">View</button>
+                <button class="reserveNow bg-amber-600 text-white text-sm px-3 py-1 rounded" data-scroll="#reservation">Reserve</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="border rounded-lg overflow-hidden shadow-sm menu-item" data-category="mains" data-title="Tagliatelle al Ragu" data-price="18" data-desc="Hand-cut tagliatelle tossed in a rich slow-cooked beef ragu, finished with Parmigiano-Reggiano.">
+            <img src="{{unsplash: tagliatelle pasta with ragu sauce topped with parmesan}}" alt="Tagliatelle" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h4 class="font-semibold">Tagliatelle al Ragu</h4>
+              <p class="text-amber-600 font-bold mt-2">$18</p>
+              <div class="mt-3 flex justify-between items-center">
+                <button class="openDetails text-sm text-amber-600">View</button>
+                <button class="reserveNow bg-amber-600 text-white text-sm px-3 py-1 rounded" data-scroll="#reservation">Reserve</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="border rounded-lg overflow-hidden shadow-sm menu-item" data-category="desserts" data-title="Tiramisu" data-price="9" data-desc="Classic Italian tiramisu layered with espresso-soaked ladyfingers and mascarpone cream.">
+            <img src="{{unsplash: close up tiramisu dessert with cocoa dusting}}" alt="Tiramisu" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h4 class="font-semibold">Tiramisu</h4>
+              <p class="text-amber-600 font-bold mt-2">$9</p>
+              <div class="mt-3 flex justify-between items-center">
+                <button class="openDetails text-sm text-amber-600">View</button>
+                <button class="reserveNow bg-amber-600 text-white text-sm px-3 py-1 rounded" data-scroll="#reservation">Reserve</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="border rounded-lg overflow-hidden shadow-sm menu-item" data-category="mains" data-title="Margherita Pizza" data-price="15" data-desc="Wood-fired pizza with San Marzano tomatoes, fresh mozzarella, and basil.">
+            <img src="{{unsplash: wood fired margherita pizza with melted cheese and basil}}" alt="Pizza" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h4 class="font-semibold">Margherita Pizza</h4>
+              <p class="text-amber-600 font-bold mt-2">$15</p>
+              <div class="mt-3 flex justify-between items-center">
+                <button class="openDetails text-sm text-amber-600">View</button>
+                <button class="reserveNow bg-amber-600 text-white text-sm px-3 py-1 rounded" data-scroll="#reservation">Reserve</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="border rounded-lg overflow-hidden shadow-sm menu-item" data-category="starters" data-title="Calamari Fritti" data-price="12" data-desc="Crispy fried calamari with lemon and herb aioli.">
+            <img src="{{unsplash: fried calamari with lemon wedge on rustic plate}}" alt="Calamari" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h4 class="font-semibold">Calamari Fritti</h4>
+              <p class="text-amber-600 font-bold mt-2">$12</p>
+              <div class="mt-3 flex justify-between items-center">
+                <button class="openDetails text-sm text-amber-600">View</button>
+                <button class="reserveNow bg-amber-600 text-white text-sm px-3 py-1 rounded" data-scroll="#reservation">Reserve</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="border rounded-lg overflow-hidden shadow-sm menu-item" data-category="desserts" data-title="Panna Cotta" data-price="8" data-desc="Silky vanilla panna cotta with mixed berry compote.">
+            <img src="{{unsplash: panna cotta with berries on white plate}}" alt="Panna Cotta" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h4 class="font-semibold">Panna Cotta</h4>
+              <p class="text-amber-600 font-bold mt-2">$8</p>
+              <div class="mt-3 flex justify-between items-center">
+                <button class="openDetails text-sm text-amber-600">View</button>
+                <button class="reserveNow bg-amber-600 text-white text-sm px-3 py-1 rounded" data-scroll="#reservation">Reserve</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section id="reservation" class="container mx-auto px-6 py-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow">
+        <h3 class="text-2xl font-bold mb-3">Reserve a Table</h3>
+        <p class="text-gray-600 mb-6">Fill in your details and we'll confirm your reservation shortly.</p>
+
+        <form id="reservationForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" name="name" placeholder="Full name" required class="p-3 border rounded" />
+          <input type="tel" name="phone" placeholder="Phone number" required class="p-3 border rounded" />
+          <input type="date" name="date" required class="p-3 border rounded" />
+          <input type="time" name="time" required class="p-3 border rounded" />
+          <select name="people" required class="p-3 border rounded">
+            <option value="">Number of guests</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+          <input type="email" name="email" placeholder="Email" required class="p-3 border rounded" />
+          <textarea name="notes" placeholder="Special requests (optional)" class="p-3 border rounded md:col-span-2"></textarea>
+
+          <div class="md:col-span-2 flex items-center gap-3">
+            <button type="submit" class="bg-amber-600 text-white px-5 py-3 rounded">Request Reservation</button>
+            <div id="reserveMessage" class="text-sm text-green-600 hidden">Reservation requested — we will contact you to confirm.</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA / Footer -->
+    <section class="bg-amber-600 text-white py-8">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+        <div>
+          <h4 class="font-bold text-lg">Ready for an unforgettable meal?</h4>
+          <p class="text-sm opacity-90">Book a table or order catering for your next event.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="#reservation" class="bg-white text-amber-600 px-5 py-3 rounded font-medium">Reserve Now</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white border-t mt-6">
+      <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
+        <p class="text-sm text-gray-600">© 2025 La Bella Cucina. All rights reserved.</p>
+        <div class="flex gap-3 mt-3 md:mt-0">
+          <a href="./about.html" class="text-sm text-gray-600 hover:text-amber-600">About</a>
+          <a href="./contact.html" class="text-sm text-gray-600 hover:text-amber-600">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MENU MODAL -->
+  <div id="menuModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden w-11/12 md:w-2/3 lg:w-1/2">
+      <div class="p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h4 id="modalTitle" class="text-xl font-bold"></h4>
+            <p id="modalPrice" class="text-amber-600 font-bold mt-1"></p>
+          </div>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-800">Close</button>
+        </div>
+        <p id="modalDesc" class="mt-4 text-gray-600"></p>
+        <div class="mt-6 flex gap-3">
+          <button id="modalReserve" class="bg-amber-600 text-white px-4 py-2 rounded">Reserve</button>
+          <button id="modalClose2" class="px-4 py-2 border rounded">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
