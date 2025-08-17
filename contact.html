@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — La Bella Cucina</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Contact La Bella Cucina" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="{{unsplash: restaurant logo on a wooden background}}" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+        <div>
+          <h1 class="text-lg font-bold">La Bella Cucina</h1>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="./index.html" class="text-sm text-gray-700 hover:text-amber-600">Home</a>
+        <a href="./about.html" class="text-sm text-gray-700 hover:text-amber-600">About</a>
+        <a href="./contact.html" class="text-sm font-medium text-amber-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl font-extrabold mb-3">Get in Touch</h2>
+          <p class="text-gray-600 mb-6">We'd love to hear from you. For reservations, private events, or general inquiries, use the form or contact us directly.</p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+              </svg>
+              <div>
+                <div class="font-semibold">Email</div>
+                <div class="text-sm text-gray-600">hello@labellacucina.example</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m6 4h2l2 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V9l2-2h2" />
+              </svg>
+              <div>
+                <div class="font-semibold">Phone</div>
+                <div class="text-sm text-gray-600">(555) 123-4567</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414M6.343 7.343L10.586 11.586" />
+              </svg>
+              <div>
+                <div class="font-semibold">Address</div>
+                <div class="text-sm text-gray-600">1234 Via Roma, San Remo, CA 90210</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="font-semibold mb-2">Hours</h4>
+            <p class="text-sm text-gray-600">Mon - Thu: 5pm — 10pm • Fri - Sat: 5pm — 11pm • Sun: 4pm — 9pm</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-white p-6 rounded shadow">
+            <h3 class="text-xl font-bold mb-3">Send Us a Message</h3>
+            <form id="contactForm" class="grid gap-3">
+              <input type="text" name="name" placeholder="Your name" required class="p-3 border rounded" />
+              <input type="email" name="email" placeholder="Your email" required class="p-3 border rounded" />
+              <input type="tel" name="phone" placeholder="Phone (optional)" class="p-3 border rounded" />
+              <textarea name="message" placeholder="How can we help?" required class="p-3 border rounded h-24"></textarea>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded">Send Message</button>
+                <div id="contactMessage" class="text-sm text-green-600 hidden">Thanks! We'll get back to you soon.</div>
+              </div>
+            </form>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="font-semibold mb-2">Find Us</h4>
+            <div class="w-full h-48 bg-gray-100 rounded overflow-hidden">
+              <img src="{{unsplash: map view of restaurant location facade and street}}" alt="Map placeholder" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="container mx-auto px-6 py-6 flex items-center justify-between">
+      <p class="text-sm text-gray-600">© 2025 La Bella Cucina</p>
+      <a href="./index.html" class="text-amber-600">Back to Home</a>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
