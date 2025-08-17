@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — La Bella Cucina</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="About La Bella Cucina" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="{{unsplash: restaurant logo on a napkin}}" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+        <div>
+          <h1 class="text-lg font-bold">La Bella Cucina</h1>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="./index.html" class="text-sm text-gray-700 hover:text-amber-600">Home</a>
+        <a href="./about.html" class="text-sm font-medium text-amber-600">About</a>
+        <a href="./contact.html" class="text-sm text-gray-700 hover:text-amber-600">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <a href="./contact.html" class="text-amber-600">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold mb-3">Our Story</h2>
+          <p class="text-gray-600 mb-4">Founded by the Moretti family in 1998, La Bella Cucina started as a tiny trattoria with one wood-fired oven and a simple goal: share the joy of honest Italian food. Over the years, we preserved family traditions while sourcing the best local ingredients to craft memorable meals.</p>
+          <p class="text-gray-600">We believe in slow cooking, welcoming service, and a menu that changes with the seasons. Whether it's our handmade pasta or our daily specials, every plate tells a story.</p>
+        </div>
+        <div>
+          <img src="{{unsplash: family-owned Italian restaurant chef stirring a pot in kitchen}}" alt="Our kitchen" class="w-full h-72 object-cover rounded shadow">
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-bold mb-6">Meet the Team</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <img src="{{unsplash: portrait of middle-aged chef in kitchen}}" alt="Chef Marco" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <h4 class="mt-3 font-semibold">Chef Marco Moretti</h4>
+            <p class="text-sm text-gray-500">Head Chef & Owner</p>
+          </div>
+          <div class="text-center">
+            <img src="{{unsplash: friendly female sommelier holding wine bottle}}" alt="Sommelier" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <h4 class="mt-3 font-semibold">Elena Rossi</h4>
+            <p class="text-sm text-gray-500">Sommelier</p>
+          </div>
+          <div class="text-center">
+            <img src="{{unsplash: smiling waiter serving table}}" alt="Manager" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <h4 class="mt-3 font-semibold">Luca Bianchi</h4>
+            <p class="text-sm text-gray-500">Restaurant Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Our Philosophy</h3>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Seasonal and local ingredients</li>
+            <li>Traditional techniques with modern touches</li>
+            <li>Warm, personal service</li>
+            <li>Conscious sourcing and sustainability</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Location & Hours</h3>
+          <p class="text-gray-600">1234 Via Roma, San Remo, CA 90210</p>
+          <table class="mt-4 text-sm text-gray-600 w-full">
+            <tbody>
+              <tr><td>Mon - Thu</td><td class="text-right">5:00 PM — 10:00 PM</td></tr>
+              <tr><td>Fri - Sat</td><td class="text-right">5:00 PM — 11:00 PM</td></tr>
+              <tr><td>Sun</td><td class="text-right">4:00 PM — 9:00 PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-amber-50 py-12">
+      <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-bold mb-4">Our Space</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <img src="{{unsplash: cozy dining room with wooden tables and hanging lights}}" alt="Dining" class="w-full h-40 object-cover rounded">
+          <img src="{{unsplash: intimate corner table with candle light}}" alt="Intimate" class="w-full h-40 object-cover rounded">
+          <img src="{{unsplash: chef plating food in open kitchen}}" alt="Open kitchen" class="w-full h-40 object-cover rounded">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="container mx-auto px-6 py-6 flex items-center justify-between">
+      <p class="text-sm text-gray-600">© 2025 La Bella Cucina</p>
+      <a href="./contact.html" class="text-amber-600">Contact Us</a>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
